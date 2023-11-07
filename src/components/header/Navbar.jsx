@@ -182,13 +182,13 @@ const Navbar = () => {
           {user ? (
             <button
               onClick={handleLogOut}
-              className="btn text-white bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"
+              className="btn text-black font-bold"
             >
               Logout
             </button>
           ) : (
             <Link to="/login">
-              <button className="btn text-white bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300">
+              <button className="btn text-black font-bold">
                 Login
               </button>
             </Link>
