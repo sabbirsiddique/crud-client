@@ -2,12 +2,13 @@
 /* eslint-disable no-unused-vars */
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-// import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
-// import { AuthContext } from "../providers/AuthProvider";
+import { AuthContext } from "../provider/AuthProvider";
+
 
 const Register = () => {
-//   const { createUser } = useContext(AuthContext);
+
+  const {createUser}= useContext(AuthContext)
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -16,6 +17,7 @@ const Register = () => {
     const email = form.get("email");
     const phtUrl = form.get("url");
     const password = form.get("password");
+    console.log(password)
 
     const validPassword =
       /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
@@ -28,13 +30,13 @@ const Register = () => {
       return;
     }
 
-    // createUser(email, password)
-    //   .then((result) => {
-    //     Swal.fire("Good job!", "Registration succesfull", "success");
-    //   })
-    //   .catch((error) => {
-    //     console.log(error);
-    //   });
+    createUser(email, password,name,phtUrl)
+      .then((result) => {
+        Swal.fire("Good job!", "Registration succesfull", "success");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (

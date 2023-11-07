@@ -5,6 +5,7 @@ import AllFoodItem from "../pages/AllFoodItem";
 import Home from "../pages/Home";
 import Blog from "../pages/Blog";
 import Register from "../pages/Register";
+import Login from "../pages/Login";
 
 // import ErrorPage from "../pages/errorpage/ErrorPage";
 
@@ -28,7 +29,11 @@ const router = createBrowserRouter([
         },
         {
             path:"/register",
-            element: <Register></Register>
+            element: <Register></Register>,
+        },
+        {
+            path:"/login",
+            element: <Login></Login>,
         }
     ]
   },
