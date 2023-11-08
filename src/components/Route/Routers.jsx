@@ -41,8 +41,8 @@ const router = createBrowserRouter([
             path: "/fooditems/:id",
             element:<Singlefood></Singlefood>,
             loader:({ params }) => {
-                const _id = params.id;
-                return fetch(`http://localhost:5000/fooditems/${_id}`).then((response) =>
+                const id = params.id;
+                return fetch(`http://localhost:5000/fooditems/${id}`).then((response) =>
                   response.json()
                 );
               },
