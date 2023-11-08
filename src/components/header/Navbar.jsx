@@ -158,16 +158,16 @@ const Navbar = () => {
                 className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
               >
                 <li>
-                  <a className="justify-between">
-                    Profile
-                    <span className="badge">New</span>
-                  </a>
+               
+                  <NavLink to="/addedfood">My added food items</NavLink>
+                    
+                  
                 </li>
                 <li>
-                  <a>Settings</a>
+                  <NavLink to="/addfood">Add a food item</NavLink>
                 </li>
                 <li>
-                  <a>Logout</a>
+                  <NavLink to="/orderedfood">My ordered food items</NavLink>
                 </li>
               </ul>
             </div>

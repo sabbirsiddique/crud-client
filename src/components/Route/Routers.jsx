@@ -7,6 +7,9 @@ import Blog from "../pages/Blog";
 import Register from "../pages/Register";
 import Login from "../pages/Login";
 import Singlefood from "../singlefood/Singlefood";
+import MyaddedaFood from "../pages/MyaddedaFood";
+import Addfood from "../pages/Addfood";
+import Orderedfood from "../pages/Orderedfood";
 
 // import ErrorPage from "../pages/errorpage/ErrorPage";
 
@@ -46,7 +49,19 @@ const router = createBrowserRouter([
                   response.json()
                 );
               },
-        }
+        },
+        {
+            path:"/addedfood",
+            element:<MyaddedaFood></MyaddedaFood>
+        },
+        {
+            path:"/addfood",
+            element:<Addfood></Addfood>,
+        },
+        {
+            path:"/orderedfood",
+            element:<Orderedfood></Orderedfood>,
+        },
     ]
   },
 ]);
