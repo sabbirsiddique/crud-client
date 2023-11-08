@@ -33,7 +33,7 @@ const Register = () => {
 
     createUser(email, password,name,phtUrl)
       .then((result) => {
-        Swal.fire("Good job!", "Registration succesfull", "success");
+        Swal.fire("Good job!","Registration succesfull", "success");
       })
       .catch((error) => {
         console.log(error);

@@ -1,4 +1,10 @@
+import { useLoaderData } from "react-router-dom";
+import Fooditems from "../food/Fooditems";
+
 const AllFoodItem = () => {
+
+
+  const foods = useLoaderData();
   return (
     <div>
       Food item comming
@@ -12,6 +18,11 @@ const AllFoodItem = () => {
           <button className="hover:bg-red-700 btn-square text-white w-[110px] bg-[#FF444A]">
             SEARCH
           </button>
+        </div>
+
+
+        <div>
+          <Fooditems foods={foods}></Fooditems>
         </div>
       </div>
 
