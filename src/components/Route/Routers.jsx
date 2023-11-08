@@ -10,6 +10,7 @@ import Singlefood from "../singlefood/Singlefood";
 import MyaddedaFood from "../pages/MyaddedaFood";
 import Addfood from "../pages/Addfood";
 import Orderedfood from "../pages/Orderedfood";
+import ErrorPage from "../pages/Errorpage/ErrorPage";
 
 // import ErrorPage from "../pages/errorpage/ErrorPage";
 
@@ -17,7 +18,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
-    // errorElement: <ErrorPage></ErrorPage>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
         {
             path: "/",
