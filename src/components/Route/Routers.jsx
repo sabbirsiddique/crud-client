@@ -11,6 +11,7 @@ import MyaddedaFood from "../pages/MyaddedaFood";
 import Addfood from "../pages/Addfood";
 import Orderedfood from "../pages/Orderedfood";
 import ErrorPage from "../pages/Errorpage/ErrorPage";
+import PrivateRouter from "./PrivateRouter";
 
 // import ErrorPage from "../pages/errorpage/ErrorPage";
 
@@ -26,7 +27,7 @@ const router = createBrowserRouter([
         },
         {
             path:"/allfoodItem",
-            element: <AllFoodItem></AllFoodItem>,
+            element: <PrivateRouter><AllFoodItem></AllFoodItem></PrivateRouter>,
             loader: () => fetch("http://localhost:5000/fooditems"),
         },
         {
@@ -53,15 +54,15 @@ const router = createBrowserRouter([
         },
         {
             path:"/addedfood",
-            element:<MyaddedaFood></MyaddedaFood>
+            element:<PrivateRouter><MyaddedaFood></MyaddedaFood></PrivateRouter>
         },
         {
             path:"/addfood",
-            element:<Addfood></Addfood>,
+            element:<PrivateRouter><Addfood></Addfood></PrivateRouter> ,
         },
         {
             path:"/orderedfood",
-            element:<Orderedfood></Orderedfood>,
+            element:<PrivateRouter><Orderedfood></Orderedfood></PrivateRouter> ,
         },
     ]
   },
