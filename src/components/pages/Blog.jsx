@@ -3,7 +3,7 @@ const Blog = () => {
     return (
         <div>
             
-            <div className="max-w-[1200px] mx-auto rounded-xl bg-gray-100 p-10 max-h-screen">
+            <div className="max-w-[1200px] mx-auto rounded-xl mb-8 mt-8 bg-gray-100 p-10 max-h-screen">
                     <p className="text-2xl font-bold mb-3">1. What is One way data binding?</p>
                     <p className="mb-3 text-xl"> <u><b>Answer:</b></u> One way data binding connect data from a source to a target, ensuring the target reflects the latest source state. Data flows in one direction, from source to target, or its triggered by event. This technique simplifies UI development and makes it more responsive.</p>
 

@@ -23,7 +23,7 @@ const Ourpopularity = () => {
     <div className="stat-desc">21% more than last month</div>
   </div>
   
-  <div className="stat">
+  <div className="md:stat">
     <div className="stat-figure text-secondary">
       <div className="avatar online">
         <div className="w-16 rounded-full">

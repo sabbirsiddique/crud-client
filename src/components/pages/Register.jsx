@@ -2,8 +2,9 @@
 /* eslint-disable no-unused-vars */
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import Swal from "sweetalert2";
 import { AuthContext } from "../provider/AuthProvider";
+import Swal from "sweetalert2";
+
 
 
 const Register = () => {
@@ -24,7 +25,7 @@ const Register = () => {
     if (!validPassword.test(password)) {
       Swal.fire(
         "Error",
-        "Password must be at least 6 characters long, contain one capital letter, and one special character.",
+        "Password must be at least 6 characters long, contain one capital letter, and one special character. Plz try again.....",
         "error"
       );
       return;
