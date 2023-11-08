@@ -45,10 +45,10 @@ const Login = () => {
 
   return (
     <div>
-      <div className="hero min-h-screen bg-gradient-to-r from-green-200 to-blue-400">
+      <div className="hero min-h-screen bg-[url('https://i.ibb.co/3RnPXsC/pexels-pixabay-531880.jpg')]">
         <div className="hero-content w-[500px] flex-col lg:flex-row-reverse">
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-transparent">
-            <form onSubmit={handleLogin} className="card-body">
+            <form onSubmit={handleLogin} className="card-body backdrop-blur-lg">
               <div className="form-control">
                 <h1 className="text-3xl font-bold text-center mb-3">
                   Please Login
@@ -76,7 +76,7 @@ const Login = () => {
                   required
                 />
               </div>
-              <p className="mt-6 flex justify-center font-sans text-sm font-light leading-normal text-inherit antialiased">
+              <p className="mt-6 flex justify-center font-sans text-lg font-bold leading-normal text-inherit antialiased">
                 Do not have an account?
                 <Link
                   to="/register"
