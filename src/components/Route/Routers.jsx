@@ -6,6 +6,7 @@ import Home from "../pages/Home";
 import Blog from "../pages/Blog";
 import Register from "../pages/Register";
 import Login from "../pages/Login";
+import Singlefood from "../singlefood/Singlefood";
 
 // import ErrorPage from "../pages/errorpage/ErrorPage";
 
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
         {
             path:"/allfoodItem",
             element: <AllFoodItem></AllFoodItem>,
-            loader: () => fetch("http://localhost:5000/fooditems")
+            loader: () => fetch("http://localhost:5000/fooditems"),
         },
         {
             path:"/blog",
@@ -35,6 +36,16 @@ const router = createBrowserRouter([
         {
             path:"/login",
             element: <Login></Login>,
+        },
+        {
+            path: "/fooditems/:id",
+            element:<Singlefood></Singlefood>,
+            loader:({ params }) => {
+                const _id = params.id;
+                return fetch(`http://localhost:5000/fooditems/${_id}`).then((response) =>
+                  response.json()
+                );
+              },
         }
     ]
   },
