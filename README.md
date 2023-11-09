@@ -1,6 +1,6 @@
 ## Website name: EateryEvo ##
 
-*Live link* : [DressCharm](https://fashion-apparel-f2b82.web.app)
+*Live link* : [EateryEvo](https://restaurant-41a1c.web.app)
 
 ### here I highlight about my website in 5 bullet points as Features you can enjoy: ###
 
