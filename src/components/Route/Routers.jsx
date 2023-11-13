@@ -10,10 +10,9 @@ import Singlefood from "../singlefood/Singlefood";
 import MyaddedaFood from "../pages/MyaddedaFood";
 import Addfood from "../pages/Addfood";
 import Orderedfood from "../pages/Orderedfood";
-import ErrorPage from "../pages/Errorpage/ErrorPage";
 import PrivateRouter from "./PrivateRouter";
+import ErrorPage from "../pages/ErrorPage";
 
-// import ErrorPage from "../pages/errorpage/ErrorPage";
 
 const router = createBrowserRouter([
   {
@@ -27,8 +26,8 @@ const router = createBrowserRouter([
         },
         {
             path:"/allfoodItem",
-            element: <PrivateRouter><AllFoodItem></AllFoodItem></PrivateRouter>,
-            loader: () => fetch("http://localhost:5000/fooditems"),
+            element: <AllFoodItem></AllFoodItem>,
+            loader: () => fetch("https://b8a11-server-side-0005-sabbirsiddique.vercel.app/fooditems"),
         },
         {
             path:"/blog",
@@ -47,14 +46,15 @@ const router = createBrowserRouter([
             element:<Singlefood></Singlefood>,
             loader:({ params }) => {
                 const id = params.id;
-                return fetch(`http://localhost:5000/fooditems/${id}`).then((response) =>
+                return fetch(`https://b8a11-server-side-0005-sabbirsiddique.vercel.app/fooditems/${id}`).then((response) =>
                   response.json()
                 );
               },
         },
         {
             path:"/addedfood",
-            element:<PrivateRouter><MyaddedaFood></MyaddedaFood></PrivateRouter>
+            element:<PrivateRouter><MyaddedaFood></MyaddedaFood></PrivateRouter>,
+            
         },
         {
             path:"/addfood",

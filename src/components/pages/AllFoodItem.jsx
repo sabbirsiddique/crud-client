@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import Fooditems from "../food/Fooditems";
+import { Helmet } from "react-helmet-async";
 
 const AllFoodItem = () => {
   const foods = useLoaderData();
@@ -10,7 +11,9 @@ const AllFoodItem = () => {
 
   const filterFoods = () => {
     const filteredFoods = foods.filter((food) => {
-      const lowerCaseFoodName = food.foodName ? food.foodName.toLowerCase() : "";
+      const lowerCaseFoodName = food.foodName
+        ? food.foodName.toLowerCase()
+        : "";
       return lowerCaseFoodName.includes(searchQuery.toLowerCase());
     });
 
@@ -37,6 +40,10 @@ const AllFoodItem = () => {
 
   return (
     <div>
+
+      <Helmet>
+        <title>EateryEvo | All Food Item</title>
+      </Helmet>
       <div className="max-w-[1200px] mx-auto mb-8 mt-8">
         <div className="input-group flex justify-center items-center text-center">
           <input
@@ -52,7 +59,9 @@ const AllFoodItem = () => {
         </div>
 
         <div>
-          <Fooditems foods={filterFoods().slice(startIndex, endIndex)}></Fooditems>
+          <Fooditems
+            foods={filterFoods().slice(startIndex, endIndex)}
+          ></Fooditems>
         </div>
       </div>
 

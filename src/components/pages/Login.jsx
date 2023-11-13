@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
   const { googleSignIn, logIn } = useContext(AuthContext);
@@ -45,6 +46,9 @@ const Login = () => {
 
   return (
     <div>
+      <Helmet>
+            <title>EateryEvo | Login</title>
+        </Helmet>
       <div className="hero min-h-screen bg-[url('https://i.ibb.co/3RnPXsC/pexels-pixabay-531880.jpg')]">
         <div className="hero-content w-[500px] flex-col lg:flex-row-reverse">
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-transparent">

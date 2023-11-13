@@ -3,8 +3,9 @@ const Ourpopularity = () => {
     return (
         <div>
 
+
             <h1 className="text-center text-3xl font-bold mb-8">Our Popularity</h1>
-            <div className="stats shadow">
+            <div className="md:stats shadow">
   
   <div className="stat">
     <div className="stat-figure text-primary">
@@ -23,7 +24,7 @@ const Ourpopularity = () => {
     <div className="stat-desc">21% more than last month</div>
   </div>
   
-  <div className="md:stat">
+  <div className="stat">
     <div className="stat-figure text-secondary">
       <div className="avatar online">
         <div className="w-16 rounded-full">

@@ -1,10 +1,14 @@
+import { Helmet } from "react-helmet-async";
 
 const Orderedfood = () => {
-    return (
-        <div>
-            <h1>Comming soon</h1>
-        </div>
-    );
+  return (
+    <div>
+      <Helmet>
+        <title>EateryEvo | Order Food</title>
+      </Helmet>
+      <h1>Comming soon</h1>
+    </div>
+  );
 };
 
 export default Orderedfood;

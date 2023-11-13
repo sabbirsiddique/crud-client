@@ -9,7 +9,7 @@ const Singlefood = () => {
   if (!Array.isArray(items)) {
     return (
       <div className=" text-center  mx-auto max-h-screen">
-        <span className="loading loading-ring w-96 loading-lg"></span>
+        <span className="loading loading-ring w-96"></span>
       </div>
     );
   }
